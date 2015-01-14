@@ -1,0 +1,23 @@
+extends layoutdash
+
+block content
+	.row
+		.small-3.columns
+			h2 Navigation
+			ul.stack.button-group
+				li
+					a.button(href='Home' ) Home
+				li
+					a.button(href='Home' ) Test
+
+		.small-9.columns
+			h1 Student Reports
+			p
+				if (!user)
+					a(href="/login") Login 
+					br
+					a(href="/register") Register 
+				if (user)
+					p You are currently logged in as #{user.username}
+					a(href="/logout") Logout 
+

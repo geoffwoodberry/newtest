@@ -1,0 +1,27 @@
+include layouthead
+
+body 
+	nav(class='top-bar', data-topbar, role='navigation')
+		ul.title-area
+			li.name
+				h1 
+					a(href='#') #{title}
+			li(class='toggle-topbar menu-icon')
+				a(href='#') 
+					span Menu
+		section.top-bar-section
+			ul.right
+				li.active
+					a(href='#') Right Button Active
+				li.has-dropdown
+					a(href='#') Username:
+						//- = ' ' + 
+				ul.dropdown
+					li
+						a(href='/logout') Logout
+			ul.left
+				li
+					a(href='#') Left Nav Button
+
+	block content
+	include layoutfooter
