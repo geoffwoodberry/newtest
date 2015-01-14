@@ -33,7 +33,7 @@ router.get('/login', function(req, res) {
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/',
   failureRedirect: '/login', // see text
-  failureFlash: true // optional, see text as well
+  failureFlash: true 
 }));
 
 
